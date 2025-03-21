@@ -6,17 +6,17 @@
 A minimal template for creating a [Model Context Protocol (MCP)](https://github.com/modelcontextprotocol) server using the [Python SDK](https://github.com/modelcontextprotocol/python-sdk).
 
 
-## Setup
+## :wrench: Setup
 
 > [!TIP]
-> If you want to create your own server, create a new repository using this template.
+> If you want to create your own server, [create a new repository using this template.](https://github.com/new?template_owner=FidelusAleksander&template_name=python-mcp-server-template&owner=%40me&name=python-mcp-server)
 
-### Prerequisites
+### :package: Prerequisites
 
 - [uv](https://docs.astral.sh/uv/) for package management
 - Python 3.13+ (`uv python install 3.13`)
 
-### Setup Python environment
+### :gear: Setup Python environment
 
 Install all dependencies and activate the virtual environment
 
@@ -25,33 +25,40 @@ uv sync
 source .venv/bin/activate
 ```
 
-## Running the Server
+## :rocket: How to use
 
 The server can be run in multiple ways:
 
-#### 1. Development Mode with the [MCP Inspector](https://github.com/modelcontextprotocol/inspector)
+### :robot: Visual Studio Code
 
-The fastest way to test and debug your server is with the MCP Inspector:
+The configuration to run this server in VSCode is already included in [`.vscode/mcp.json`](./.vscode/mcp.json).
+
+All you need to do is Open VS Code Copilot Edits (Agent Mode)
+
+> [!NOTE]
+> At the time of writing this, MCP is only available in [Visual Studio Code Insiders version](https://code.visualstudio.com/insiders/)
+
+### :microscope: Development Mode
+
+The fastest way to test and debug your server is with the [MCP Inspector](https://github.com/modelcontextprotocol/inspector):
 
 ```bash
 mcp dev server/main.py
 ```
 
-#### 2. Direct Execution
-
-Run the server directly with Python:
+or you can run your server directly
 
 ```bash
 python server/main.py
 ```
 
-## Documentation
+## :books: Documentation
 
 For more information about the Model Context Protocol:
 - [MCP Python SDK](https://github.com/modelcontextprotocol/python-sdk)
 - [Model Context Protocol Specification](https://github.com/modelcontextprotocol/mcp)
 
-## License
+## :page_with_curl: License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the [MIT License](LICENSE)
 

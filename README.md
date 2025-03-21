@@ -1,79 +1,49 @@
 # Python MCP Server Template
 
-A minimal template for creating a Model Context Protocol (MCP) server using the [Python SDK](https://github.com/modelcontextprotocol/python-sdk).
+[![Python 3.13+](https://img.shields.io/badge/python-3.13+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-## Overview
+A minimal template for creating a [Model Context Protocol (MCP)](https://github.com/modelcontextprotocol) server using the [Python SDK](https://github.com/modelcontextprotocol/python-sdk).
 
-This template provides the basic structure for implementing an MCP server that can be used to serve AI models with context window management capabilities. The Model Context Protocol allows for efficient handling of context windows across multiple requests.
 
-## Features
+## Setup
 
-- Minimal MCP server implementation using FastMCP
-- [uv](https://docs.astral.sh/uv/) for Python package management
-- Sample tools, resources, and prompts
-- Lifespan management with application context
-
-## Getting Started
+> [!TIP]
+> If you want to create your own server, create a new repository using this template.
 
 ### Prerequisites
 
-- Python 3.10+
 - [uv](https://docs.astral.sh/uv/) for package management
+- Python 3.13+ (`uv python install 3.13`)
 
-### Installation
+### Setup Python environment
 
-1. Create a new repository using this template
-2. Clone your new repository
-3. Install dependencies:
+Install all dependencies and activate the virtual environment
 
 ```bash
-uv venv
-source .venv/bin/activate  # On Windows: .venv\Scripts\activate
-uv pip install -e .
+uv sync
+source .venv/bin/activate
 ```
 
-### Running the Server
+## Running the Server
 
-The server can be run in two ways:
+The server can be run in multiple ways:
 
-#### Development Mode with the MCP Inspector
+#### 1. Development Mode with the [MCP Inspector](https://github.com/modelcontextprotocol/inspector)
 
 The fastest way to test and debug your server is with the MCP Inspector:
 
 ```bash
-mcp dev src/server.py
+mcp dev server/main.py
 ```
 
-#### Installing in Claude Desktop
+#### 2. Direct Execution
 
-Once your server is ready, install it in Claude Desktop:
+Run the server directly with Python:
 
 ```bash
-mcp install src/server.py
+python server/main.py
 ```
-
-#### Direct Execution
-
-You can also run the server directly:
-
-```bash
-python main.py
-# or
-python src/server.py
-```
-
-## Customization
-
-To customize the server for your specific model:
-
-1. Modify the `AppContext` class in `src/server.py` to configure your model parameters
-2. Add new tools by creating new functions decorated with `@mcp.tool()`
-3. Add new resources by creating new functions decorated with `@mcp.resource()`
-4. Add new prompts by creating new functions decorated with `@mcp.prompt()`
-
-## Example Client
-
-The `examples/client_example.py` file demonstrates how to interact with the MCP server as a client.
 
 ## Documentation
 
@@ -83,5 +53,5 @@ For more information about the Model Context Protocol:
 
 ## License
 
-MIT
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 

@@ -1,0 +1,14 @@
+{
+    "servers": {
+        "my-mcp-server": {
+            "type": "stdio",
+            "command": "uv",
+            "args": [
+                "--directory",
+                "${workspaceFolder}/",
+                "run",
+                "server/main.py"
+            ]
+        }
+    }
+}

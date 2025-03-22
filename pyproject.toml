@@ -9,14 +9,11 @@ dependencies = [
     "mcp[cli]>=1.5.0",
 ]
 
-
-[project.optional-dependencies]
+[dependency-groups]
 dev = [
-    "black",
-    "pytest",
-    "pytest-asyncio",
+    "pytest>=8.3.5",
+    "ruff>=0.11.2",
 ]
-
 
 [build-system]
 requires = ["hatchling"]

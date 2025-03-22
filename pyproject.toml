@@ -27,3 +27,11 @@ allow-direct-references = true
 
 [tool.hatch.build.targets.wheel]
 packages = ["server/"]
+
+[tool.ruff]
+select = ["E", "F", "B", "I", "PL"]
+line-length = 100
+target-version = "py313"
+
+[tool.ruff.per-file-ignores]
+"__init__.py" = ["F401"]

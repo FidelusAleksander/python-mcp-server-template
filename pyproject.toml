@@ -27,3 +27,8 @@ allow-direct-references = true
 
 [tool.hatch.build.targets.wheel]
 packages = ["server/"]
+
+[tool.ruff]
+lint.select = ["E", "F", "B", "I", "PL"]
+line-length = 100
+target-version = "py313"

@@ -1,13 +1,15 @@
 # server.py
-from mcp.server.fastmcp import FastMCP
 import logging
 
+from mcp.server.fastmcp import FastMCP
+
 # Configure logging
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 logger = logging.getLogger(__name__)
 
 # Create an MCP server
 mcp = FastMCP("Demo")
+
 
 # Add an addition tool
 @mcp.tool()
@@ -15,11 +17,13 @@ def add(a: int, b: int) -> int:
     """Add two numbers"""
     return a + b
 
+
 # Add a subtraction tool
 @mcp.tool()
 def subtract(a: int, b: int) -> int:
     """Subtract two numbers"""
     return a - b
+
 
 if __name__ == "__main__":
     # Start the server
